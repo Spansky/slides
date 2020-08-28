@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico" />
+		<title>Codepals</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/leon.css">
+		<link rel="stylesheet" href="css/reveal-embed-video.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal" data-video="small top-right">
+			<div class="slides">
+				<section>
+					<h1>Codepals #2</h1>
+					<h4>1) Dangerous USB-Sticks</h4>
+					<h4>2) Host your website for free</h4>
+					<img width="200"src="img/codepals-logo-trans.png" alt="">
+					<img width="200" src="img/GreatOutdoors.PNG" alt="">
+					<marquee><p style="color: red;">Grab a beer, have a bite, we will start soon...</p></marquee>
+				</section>
+				<section>
+					<h1>Codepals #2</h1>
+					<h4>1) Dangerous USB-Sticks</h4>
+					<h4>2) Host your website for free</h4>
+					<img width="200"src="img/codepals-logo-trans.png" alt="">
+					<img width="200" src="img/GreatOutdoors.PNG" alt="">
+				</section>
+				<section>
+					<h2 style="margin-top: 20%;">Dangerous USB-Sticks</h2>
+					<img class="r-stretch" src="img/usb-stick.svg" alt="">
+				</section>
+				<section>
+					<section>
+						<img class="r-stretch" src="img/harddisk.svg" alt="">
+					</section>
+					<section>
+						<img class="r-stretch" src="img/usb-mouse.svg" alt="">
+					</section>
+					<section>
+						<img class="r-stretch" src="img/usb-stick.svg" alt="">
+					</section>
+					<section>
+						<img width="20%" src="img/harddisk.svg" alt="">
+						<img width="20%" src="img/usb-mouse.svg" alt="">
+						<img width="20%" src="img/usb-stick.svg" alt="">
+					</section>
+					<section>
+						<span class="fragment" data-fragment-index="1"><span class="fragment highlight-red" data-fragment-index="4">Universal </span></span>
+						<span class="fragment" data-fragment-index="2">Serial </span>
+						<span class="fragment" data-fragment-index="3">Bus </span>
+					</section>
+					<section>
+						<img height=300 src="img/hak5-rubber.png" alt="">
+					</section>
+					<section>
+						<pre><code class="noscroll" data-trim data-noescape data-line-numbers="|1|2|3|5|6|8|9-10|12">
+							REM This is a comment
+							DELAY 500
+							GUI r
+							DELAY 200
+							STRING notepad.exe
+							ENTER
+							DELAY 300
+							STRING Hello World
+							ALT SPACE
+							STRING x
+							DELAY 50
+							GUI l
+						</code></pre>
+					</section>
+					<section>
+						<img class="fragment" width="25%" src="img/tb-rubber.PNG" alt="">
+						<img class="fragment" width="25%" src="img/tb-arduino.PNG" alt="">
+						<img class="fragment" width="25%" src="img/tb-digispark.PNG" alt="">
+					</section>
+				</section>
+				<section data-video="big top-right">
+					<h4>Let's have a look...</h4>
+				</section>
+				<section>
+					<section>
+						Code Examples
+					</section>
+					<section data-auto-animate>
+						<h4>Basic Code Structure</h4>
+						<pre data-id="code-animation" style="float: left; width: 50%;"><code class="noscroll" data-trim data-noescape data-line-numbers="0-0|1-4|5-8">
+							void setup()
+							{
+							  ...
+							}
+							void loop()
+							{
+							  ...
+							}
+						</code></pre>
+					</section>
+					<section data-transition="slide fade" data-auto-animate>
+						<h4>Blinking Lights</h4>
+						<pre data-id="code-animation" style="float: left; width: 50%;"><code class="noscroll" data-trim data-noescape data-line-numbers="|3-4|8-9|11-12|10,13">
+							void setup()
+							{
+							  pinMode(0, OUTPUT);
+							  pinMode(1, OUTPUT);
+							}
+							void loop()
+							{
+							  digitalWrite(0, HIGH);
+							  digitalWrite(1, HIGH);
+							  delay(1000);
+							  digitalWrite(0, LOW);
+							  digitalWrite(1, LOW);
+							  delay(1000);
+							}
+						</code></pre>
+						<div class="fragment" style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+							<img data-id="blink" class="blinking-1000" style="width: 200px" src="img/red-led.svg">
+						</div>
+					</section>
+					<section data-transition="slide fade">
+						<h4>Blinking Lights</h4>
+						<pre data-id="code-animation" style="float: left; width: 50%;"><code class="noscroll" data-trim data-noescape data-line-numbers="10,13">
+							void setup()
+							{
+							  pinMode(0, OUTPUT);
+							  pinMode(1, OUTPUT);
+							}
+							void loop()
+							{
+							  digitalWrite(0, HIGH);
+							  digitalWrite(1, HIGH);
+							  delay(200);
+							  digitalWrite(0, LOW);
+							  digitalWrite(1, LOW);
+							  delay(200);
+							}
+						</code></pre>
+						<div style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+							<img data-id="blink" class="blinking-200" style="width: 200px" src="img/red-led.svg">
+						</div>
+					</section>
+					<section>
+						<img width="50%" src="img/automatic-bird2.gif" alt="">
+					</section>
+					<section>
+						<h4>Helping Homer Simpson</h4>
+						<pre style="float: left; width: 50%;"><code class="noscroll" data-line-numbers="|1|4|8|10|" data-trim data-noescape>
+							#include "DigiKeyboard.h"
+
+							void setup() {
+							  DigiKeyboard.delay(5000);
+							}
+
+							void loop() {
+							  DigiKeyboard.print("Z");
+							  DigiKeyboard.delay(500);
+							  DigiKeyboard.println("");
+							  DigiKeyboard.delay(2500);
+							}
+						</code></pre>
+						<div class="fragment" style="height: 400px; display: flex; flex-direction: column; margin-top: 5rem;">
+							<span class="fragment">Homer, are you at work?</span>
+							<span class="fragment">(Program Example showing up here)</span>
+						</div>
+					</section>
+					<section>
+						<h4>How to upload code?</h4>
+					</section>
+					<section>
+						<h4>Requirements</h4>
+						<ul>
+							<li class="fragment">Arduino IDE</li>
+							<li class="fragment">Settings-file for Arduino IDE</li>
+							<li class="fragment">Firmware for Digispark</li>
+							<li class="fragment">(optional) Code Converters</li>
+						</ul>
+					</section>
+					<section>
+						<h1>Live Demo</h1>
+					</section>
+					<section>
+						<h4>What else can we do with it...?</h4>
+					</section>
+				</section>
+				
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="webcam/reveal-embed-video.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				navigationMode: 'linear',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom],
+				dependencies: [
+					{ src: '../webcam/reveal-embed-video.js' }
+				],
+				'embed-video': {
+					enabled: false, // optional, default false
+					persistent: false, // optional, default false
+					// path: '/path/to/plugin' // optional, default null
+				}   
+			});
+			Reveal.configure({ 
+				pdfSeparateFragments: false,
+				pdfMaxPagesPerSlide: 1
+			}); 
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <linearGradient id="svg_6" x1="0" y1="0" x2="1" y2="0">
+   <stop stop-color="#bfbfbf" offset="0"/>
+   <stop stop-color="#404040" offset="1"/>
+  </linearGradient>
+  <linearGradient id="svg_11" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+   <stop stop-color="#dd0000" stop-opacity="0.992188" offset="0"/>
+   <stop stop-color="#820101" stop-opacity="0.988281" offset="1"/>
+  </linearGradient>
+  <linearGradient id="svg_14" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+   <stop stop-color="#ffffff" stop-opacity="0.996094" offset="0"/>
+   <stop stop-color="#d30606" stop-opacity="0.984375" offset="0.703125"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <circle fill="#212121" stroke-width="17.5" stroke-linecap="round" cx="320" cy="240" r="196.125" id="svg_3" transform="rotate(90 320 240)"/>
+  <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" fill-opacity="0.64" cx="319.252837" cy="239.999045" r="160" id="svg_7"/>
+  <circle fill="url(#svg_11)" stroke-width="17.5" stroke-linecap="round" cx="320.000535" cy="240.001698" r="150" id="svg_8"/>
+  <ellipse fill="url(#svg_14)" stroke-width="17.5" stroke-linecap="round" cx="249.179609" cy="168.124194" rx="75.675959" ry="44.402987" id="svg_20" transform="rotate(-47.7626 249.18 168.124)"/>
+ </g>
+</svg>
