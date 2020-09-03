@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Codepals</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/leon.css">
+		<link rel="stylesheet" href="css/reveal-embed-video.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal" data-video="big top-right">
+			<div class="slides" >
+				<section>
+					<h1>Codepals Meetup</h1>
+					<img width="200"src="img/codepals-logo-trans.png" alt="">
+					<img width="200" src="img/GreatOutdoors.PNG" alt="">
+					<h4>Reveal.JS</h4>
+					<h4>& </h4>
+					<h4>From Turing Machine to Raspberry Pi</h4>
+					
+				</section>
+				<section>
+					It's a Javascript Library...
+				</section>
+				<section>
+					...for Presentations.
+				</section>
+				<section>
+					<section>
+						<small>Let's start with...</small>
+						<h1>Headings</h1>
+					</section>
+					<section>
+						<h1>Better know HTML</h1>
+						<pre><code class="hljs html"><h1>Better know HTML</h1></code></pre>
+					</section>
+					<section>
+						<h2>At least...</h2>
+						<pre><code class="hljs html"><h2>At least...</h2></code></pre>
+					</section>
+					<section>
+						<h3>...the basics...</h3>
+						<pre><code class="hljs html"><h3>...the basics...</h3></code></pre>
+					</section>
+					<section>
+						<h4>...which we almost</h4>
+						<h5>have covered</h5>
+						<h6>now</h6>
+						<pre>
+						<code class="hljs html" data-trim>
+							<h4>...which we almost</h4>
+							<h5>have covered</h5>
+							<h6>now...</h6>
+						</code></pre>
+						<marquee>
+							But shouldn't h4-h6 be different?
+						</marquee>
+						<pre class="fragment"><code class="hljs html" data-trim>
+							<marquee>
+								But shouldn't h4-h6 be different?
+							</marquee>
+						</code></pre>
+					</section>
+					<section>
+						<style>
+							span.make-it-special{
+								color: red;
+								position:fixed;
+								margin-left: -20px;
+								animation: rot360 4s linear 0s infinite;
+							}
+
+							@keyframes rot360 {
+								0% { rotate: 0deg; font-size: 10px;}
+								50% { rotate: 180deg; font-size: 100px;}
+								100% { rotate: 360deg; font-size: 10px;}
+							}
+						</style>
+						<h4>Well...</h4>
+						<p class="fragment">...yes!</p>
+						<p class="fragment"><s>You</s> <span class="make-it-special">better</span> <u>learn</u> <b>CSS</b> aswell</p>
+						<pre class="fragment"><code class="hljs html" data-trim>
+							<h4>Well...</h4>
+							<p class="fragment">...yes!</p>
+							<p class="fragment">
+								<s>You</s> 
+								<span class="make-it-special">better</span> 
+								<u>learn</u> <b>CSS</b> aswell
+							</p>
+						</code></pre>
+					</section>
+					<section>
+						<p>But actually you don't have to...</p>
+						<h1>👻</h1>
+					</section>
+					<section>
+						<p>It will just make your life easier...</p>
+						<img src="img/leon.jpeg"/>
+					</section>
+					<section>
+						<img style="max-width: 40%;" src="img/leon.jpeg"/>
+						<pre class="fragment" style="width: auto;"><code class="hljs html" data-trim>
+							<img style="max-width: 40%;" src="img/leon.jpeg"/>
+						</code></pre>
+					</section>
+					<section>
+						<p style="float: left;">Or aligning your text to the left...</p>
+						<figure>
+							<img style="max-width: 40%; float: right;" src="img/leon.jpeg">
+						</figure>
+						<pre style="float: left; width: 100%;" class="fragment"><code class="hljs html" data-trim>
+							<p style="float: left;">Or aligning your text to the left...</p>
+							<img style="max-width: 40%;" src="img/leon.jpeg"/>
+						</code></pre>
+					</section>
+					<section>
+						<h3>Cons</h3>
+						<ul>
+							<li class="fragment">You need to learn a bit HTML/CSS</li>
+							<li class="fragment" style="list-style: none; padding-left: 30px; font-size: 0.9rem;">...but there are a lot of predefined classes like "fragment".</li>
+							<li class="fragment" >If you forget a < or > or / ...</li>
+							<li class="fragment" style="list-style: none; padding-left: 30px; font-size: 0.9rem;">...don't use reveal when you are stressed. Use it when you want to learn smth. </li>
+							<li class="fragment">Your colleagues will hate you</li>
+							<li class="fragment" style="list-style: none; padding-left: 30px; font-size: 0.9rem;">..., especially when they ask you for the ppt and you just 🤷‍♂️.</li>
+							<li class="fragment">Pictures</li>
+						</ul>
+					</section>
+					<section data-background-image="img/fullscreen-dinner.svg">
+						<h1 style="rotate: -10deg;">Go Fullscreen</h1>
+					</section>
+					<section data-background-opacity=1 data-background-image="img/fullscreen-meeting.svg">
+						<pre><code class="hljs html" data-trim>
+							<section data-background-image="img/fullscreen-meeting.svg">
+							  <p>Your text here...</p>
+							</section>
+						</code></pre>
+					</section>
+					<section data-background-opacity=0.1 data-background-image="img/fullscreen-meeting.svg">
+						<pre><code class="hljs html" data-trim>
+							<section data-background-opacity=0.1 data-background-image="img/fullscreen-meeting.svg">
+							  <p>Your text here...</p>
+							</section>
+						</code></pre>
+					</section>
+					<section data-background-opacity=0.1 data-background-image="img/leon.svg">
+						<h1>Pros 💪</h1>
+					</section>
+					<section data-background-opacity=0.1 data-background-image="img/leon.svg">
+						<pre><code class="hljs python" data-trim data-line-numbers="|2-5|7-8">
+							class Vocabulary:
+								def __init__(self, english, chinese, prof = 0):
+									self.english = english
+									self.chinese = chinese
+									self.prof = prof
+
+								def down(self):
+									self.prof -= 1
+
+								def up(self):
+									self.prof += 1
+
+								def __str__(self):
+									return self.english
+						</code></pre>
+					</section>
+					<section data-background-video="img/video.mp4"
+								data-background-video-loop data-background-video-muted>
+						<style>
+							.blur:not(:hover) {
+								-webkit-filter: blur(2px);
+								filter: blur(2px);
+								color: white;
+							}
+
+							.blur{
+								color: black;
+								font-size: 5rem;
+							}
+						</style>
+						<span class="blur">Put some special ingredients...</span>
+					</section>
+					<section>
+						<style>
+							h1.wink {
+								animation: wink 1.5s linear 0s infinite;
+							}
+
+							@keyframes wink {
+								0% {rotate: -10deg;}
+								50% {rotate: 20deg;}
+								100% {rotate: -10deg;}
+							}
+						</style>
+						<h1>Say</h1>
+						<h1 class="wink">🖐</h1>
+						<h1>To Powerpoint</h1>
+					</section>
+					<section>
+						<h1><a href="https://revealjs.com/">Reveal.js</a></h1>
+					</section>
+					<section>
+						<h1>🤘</h1>
+						<h3 class="fragment">Leon Sczepansky</h3>
+						<p class="fragment">Add me on LinkedIn / Wechat / Github</p>
+						<a class="fragment" href="https://github.com/Spansky">https://github.com/Spansky</a>
+					</section>
+				</section>	
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="webcam/reveal-embed-video.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				navigationMode: 'linear',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				dependencies: [
+					{ src: '../webcam/reveal-embed-video.js' }
+				],
+				'embed-video': {
+					enabled: false, // optional, default false
+					persistent: false, // optional, default false
+					// path: '/path/to/plugin' // optional, default null
+				} 
+			});
+		</script>
+	</body>
+</html>
