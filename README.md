@@ -5,4 +5,5 @@ Public Available Slides / Presentations / Material
 
 [03-python-examples (Code Examples)](https://github.com/Spansky/slides/tree/master/03-python-examples)
 
-[04-reveal (Slides)]((https://spansky.github.io/slides/04-reveal))
+[04-reveal (Slides)](https://spansky.github.io/slides/04-reveal)
+
