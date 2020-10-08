@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Codepals</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal" data-video="big top-right">
+			<div class="slides" >
+				<section data-state='no-title-footer'>
+					<h1>Codepals Meetup</h1>
+					<img width="200"src="img/codepals-logo-trans.png" alt="">
+					<img width="200" src="img/GreatOutdoors.PNG" alt="">
+					<h4>Backend & Frontend</h4>
+					<small>with Python & JavaScript</small>
+				</section>
+				<section data-state='no-title-footer' 
+					data-background-image="img/codepals_group_pic.JPG"></section>
+				<section data-state='no-title-footer' 
+					data-background-opacity=0.1 data-background-image="img/codepals_group_pic.JPG">
+					<img class="fragment" width="200"src="img/codepals-logo-trans.png" alt="">
+					<br>
+					<ul style="list-style: none; text-align: center;">
+						<li class="fragment">Learn Coding</li>
+						<li class="fragment">Learn Speaking</li>
+						<li class="fragment">Build a network</li>
+					</ul>
+				</section>
+				<section>
+					<small>On this slide there was a live demo of the Uhm-Counter. 
+					As hosting it online costs money, the live demo is not available anymore.
+					You can host it on your own. Also the footer in the next slides will not work. 
+					The repo is <a href="https://github.com/Spansky/uhm-counter">on github</a>.</small>
+				</section>
+				<section id="backend-frontend">
+					<section data-background-opacity=0.1 data-background-image="img/lala-azizli-dJw88I9GeNI-unsplash.jpg">
+						<h4>Backend & Frontend</h4>
+						<aside class="notes">
+							* common understanding of visible <b><u>layer</u></b> & background processing<br>
+							* <u><b>client server</b></u> approach: one server, multiple clients<br>
+							* backend can be service provider, frontend is <u><b>consumer</b></u><br>
+							* backend can consist of multiple services, talk to each other<br>
+							* frontend consumes backend services and takes care of visu<br>
+						</aside>
+					</section>
+					<section data-background-opacity=0.1 data-background-image="img/lala-azizli-dJw88I9GeNI-unsplash.jpg">
+						<h4>Backend</h4>
+						<aside class="notes">
+							* Operating System<br>
+							* Webserver - Apache or Nginx, job: serve files<br>
+							* Loadbalancer - one IP address, multiple domains<br>
+							* Application Server + your Application -> generating HTML, or just data (JSON/XML/CSV/Pictures)<br>
+							* Database (Postgres / SQL Server / MySQL / MongoDB / ...)
+							* options over options (Monoliths, Microservices)
+						</aside>
+					</section>
+					<section data-background-opacity=0.1 data-background-image="img/lala-azizli-dJw88I9GeNI-unsplash.jpg">
+						<h4>Frontend</h4>
+						<aside class="notes">
+							* Browser Only (JavaScript,Frameworks)<br>
+							* Operating System (iOS, Android) + GUI APIs<br>
+							* Local Database (often very simple, e.g. Cookies)
+							* options over options (Microfrontend is a new trend)
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section><h4>(REST-)API</h4></section>
+					<section  
+					data-background-iframe="https://landertee.github.io/Codepals/"
+					data-background-interactive>
+					<h3 style="background-color: black; rotate: -10deg;">https://landertee.github.io/Codepals/</h3>
+					<p class="fragment" style="background-color: red; rotate: 5deg;">How does the browser know what to do?</p>
+					<p class="fragment" style="background-color: aqua; rotate: -15deg;">Let's have a look!!!</p>
+					</section>
+					<section>
+						<pre><code class="hljs bash" data-trim>
+							curl "https://landertee.github.io/Codepals/"
+						</code></pre>
+						<small class="fragment" style="width: 60%; background-color: red; rotate: -5deg;">Time to copy & paste</small>
+					</section>
+					<section>
+						<pre><code class="hljs bash" data-trim>
+							curl -X GET "http://uhm.codepals.com:8000" \
+							 -H "accept: application/json"
+						</code></pre>
+					</section>
+					<section>
+						<pre><code class="hljs bash" data-trim>
+							curl -X POST "http://uhm.codepals.com:8000/increment" \
+							 -H "accept: application/json" \
+							 -d ""
+						</code></pre>
+					</section>
+					<section>
+						<h4>Common Methods:</h4>
+						<ul>
+							<li class="fragment">GET</li>
+							<li class="fragment">POST</li>
+							<li class="fragment">PUT</li>
+							<li class="fragment">DELETE</li>
+							<li class="fragment">OPTIONS</li>
+							<li class="fragment">HEAD</li>
+							<li class="fragment">...</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>GET (classic browsers from 1996, Address Bar, HTML-Forms) - not used for changing data</li>
+								<li>POST (HTML-Forms, JavaScript) - used for a lot of stuff, e.g. changing data, but also for just searching</li>
+								<li>PUT - create a resource, e.g. an object to be written into DB</li>
+								<li>DELETE - delete a resource</li>
+								<li>OPTIONS - show what options an endpoint has, e.g. which data to answer</li>
+								<li>HEAD - just request the header info, e.g. which server am I talking to</li>
+								<li>...</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section><h4>Frontends</h4></section>
+					<section>
+						<h4>Some Options</h4>
+						<ul>
+							<li class="fragment">pure HTML</li>
+							<li class="fragment">JavaScript</li>
+							<ul style="font-size: 1.5rem;">
+								<li class="fragment">pure JS</li>
+								<li class="fragment">React.js</li>
+								<li class="fragment">Vue.js</li>
+								<li class="fragment">...</li>
+								<li class="fragment">Svelte</li>
+							</ul>
+							<li class="fragment">Native Apps</li>
+							<ul style="font-size: 1.5rem;">
+								<li class="fragment">iOS (Swift / Objective C)</li>
+								<li class="fragment">Android (</li>
+								<li class="fragment">Windows App (.net/c++/c#)</li>
+								<li class="fragment">...</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h4>Code-Example: Svelte</h4>
+					</section>
+					<section>
+						<pre><code class="hljs html" data-trim>
+							<script>
+								//script goes here
+							</script>
+							
+							<style>
+								.style-goes-here{}
+							</style>
+							
+							<p>Uhm-Counter: {counter}</p>
+						</code></pre>
+					</section>
+					<section>
+						<pre><code class="hljs html" data-trim data-line-numbers="0|5-9|2,11|12-14|22-26|28">
+							<script>
+								import { onMount } from 'svelte';
+								let counter = '...';
+							
+								async function getCounter() {
+									const response = await fetch('http://uhm.codepals.com:8000');
+									const json = await response.json();
+									return json.counter;
+								};
+							
+								onMount(() => {
+									const interval = setInterval(() => {
+										getCounter().then(data => {counter = data});
+									}, 5000);
+							
+								return () => {
+										clearInterval(interval);
+									};
+								});
+							</script>
+							
+							<style>
+								p {
+									color: rgb(54, 181, 254);
+								}
+							</style>
+							
+							<p>Uhm-Counter: {counter}</p>
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section><h4>Backends</h4></section>
+					<section><h4>Some Options</h4>
+						<ul>
+							<li class="fragment">Classic Approach</li>
+							<li class="fragment">Docker</li>
+							<li class="fragment">Serverless</li>
+							<li class="fragment">...</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Code Example: Python Backend</h4>
+						<ul>
+							<li>Python-Code</li>
+							<li class="fragment">Docker & Compose</li>
+						</ul>
+					</section>
+					<section>
+						<pre><code class="hljs python" data-trim data-line-numbers="0|1,4|2,5-11|13|23-25|34-38">
+						from fastapi import FastAPI
+						from fastapi.middleware.cors import CORSMiddleware
+
+						app = FastAPI()
+						app.add_middleware(
+							CORSMiddleware,
+							allow_origins=["*"],
+							allow_credentials=True,
+							allow_methods=["*"],
+							allow_headers=["*"],
+						)
+
+						counter = 0
+
+						from fastapi import APIRouter, HTTPException
+						from pydantic import BaseModel
+
+						counters = APIRouter()
+
+						class Counter(BaseModel):
+							counter: int
+
+						@counters.get('/', response_model=Counter)
+						async def index():
+							return {"counter": counter}
+
+						@counters.post('/reset', response_model=Counter)
+						async def reset():
+							global counter
+							counter = 0
+							return {"counter": counter}
+
+
+						@counters.post('/increment', response_model=Counter)
+						async def increment():
+							global counter
+							counter += 1
+							return {"counter": counter}
+
+						app.include_router(counters, prefix='', tags=['counters'])
+						</code></pre>
+					</section>
+					<section data-background-color="beige" data-background-iframe="http://uhm.codepals.com:8000/docs"
+					data-background-interactive>
+
+					</section>
+					<section>
+						<h4>Docker (fyi)</h4>
+						<pre><code class="hljs bash" data-trim>
+							sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+							sudo yum-config-manager \
+								--add-repo \
+								https://download.docker.com/linux/centos/docker-ce.repo
+							sudo yum install docker-ce docker-ce-cli containerd.io
+						</code></pre>
+						<h4>Docker-Compose (fyi)</h4>
+						<pre><code class="hljs bash" data-trim>
+							sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+							sudo chmod +x /usr/local/bin/docker-compose
+							sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+						</code></pre>
+					</section>
+					<section>
+						<h4>Dockerfile</h4>
+						<pre><code class="hljs docker" data-trim>
+							FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+							COPY requirements.txt /
+							RUN pip install -r /requirements.txt
+							WORKDIR /app/
+							COPY ./. /app
+							ENV PYTHONPATH=/app
+						</code></pre>
+					</section>
+					<section>
+						<h4>Docker-Compose.yml</h4>
+						<pre><code class="hljs yaml" data-trim>
+							version: '3.7'
+							services:
+								uhm-ui:
+									...
+								uhm_service:
+									build: ./backend
+									container_name: uhm-service
+									image: uhm-service
+									environment: 
+									- MAX_WORKERS=1
+									ports:
+										- 8000:80
+						</code></pre>
+					</section>
+					<section>
+						<h4>Run Backend & Frontend (Windows/Linux)</h4>
+						<pre><code class="hljs bash" data-trim>
+							git clone https://github.com/Spansky/uhm-counter.git
+							cd uhm-counter
+							docker-compose build
+							docker-compose up -d
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section><h4>Go Serverless</h4></section>
+					<section><h4>Pain - provisioning a server</h4>
+						<ul>
+							<li class="fragment">cost</li>
+							<li class="fragment">maintenance</li>
+							<li class="fragment">capacity planning</li>
+							<li class="fragment">security</li>
+							<li class="fragment">scalability</li>
+						</ul>
+					</section>
+					<section><h4>Cloud provider runs the server</h4></section>
+					<section><h4>Not peer-to-peer</h4></section>
+					<section><h4>Serverless function in python</h4>
+					<ul>
+						<li class="fragment">2008 - Google App Engine - customized python only</li>
+						<li class="fragment">2014 - AWS Lamda - Full python</li>
+						<li class="fragment">2016 - Google Cloud Functions, IBM Cloud Functions</li>
+						<li class="fragment">2019 - Microsoft Azure Function App supporting Python</li>
+					</ul>
+					</section>
+					<section><h4>Serverless RDBMS</h4>
+					<ul>
+						<li class="fragment">Aurora - AWS</li>
+						<li class="fragment">Azure Data Lake - Microsoft</li>
+						<li class="fragment">Firebase - Google</li>
+					</ul>
+					</section>
+					<section><h4>Advantage 1 - Cost</h4></section>
+					<section><h4>Advantage 2 - Elasticity vs Scalability</h4></section>
+
+					<section><h4>Visual Studio Code</h4>
+					<ul>
+						<li class="fragment">Microsoft</li>
+						<li class="fragment">Free</li>
+						<li class="fragment">Typescript</li>
+					</ul>
+					</section>
+					<section><h4>Test locally - One-click deployment</h4></section>
+					<section><h4>Uhm-counter - HTTP trigger</h4></section>
+					<section><h4>Other trigger types - Queue, Timer, Event</h4></section>
+					<section><h4>Disadvantage 1 - performance</h4></section>
+					<section><h4>Disadvantage 2 - monitoring & Debugging</h4></section>
+					<section><h4>Hassle - psycopg2-binary</h4></section>
+					<section><h4>Disadvantage 3 - vendor lock-in</h4></section>
+					<section><h4>Hassle - Cross-Origin Resource Sharing</h4></section>
+					<section><h4>Good applications of Serverless</h4></section>
+					<section><h4>Bad applications of Serverless</h4></section>
+
+					<section>
+						<pre><code class="hljs bash" data-trim>
+						import psycopg2
+						import logging
+						import json
+						import azure.functions as func
+
+
+						def main(req: func.HttpRequest) -> func.HttpResponse:
+							logging.info("counter")
+							return func.HttpResponse(get_count(), status_code=200)
+
+						def get_count():
+							connection = psycopg2.connect(user="iyiyqqhfvwmalt",
+								password="...",
+								host="xyz.compute-1.amazonaws.com",
+								port="5432",
+								database="xxxx")
+							cursor = connection.cursor()
+							postgreSQL_select_Query = "SELECT count(*) FROM uhm_counter"
+							cursor.execute(postgreSQL_select_Query)
+							uhm_records = cursor.fetchone()
+							if (connection):
+								cursor.close()
+								connection.close()
+							return json.dumps({'counter': uhm_records[0]})
+						</code></pre>
+					</section>
+				</section>
+				<section data-state='no-title-footer' 
+					data-background-opacity=0.1 data-background-image="img/codepals_group_pic.JPG">
+					<img class="fragment" width="200"src="img/codepals-logo-trans.png" alt="">
+					<br>
+					<p class="fragment">Leon Sczepansky </p>
+					<p class="fragment">Zhengyu Ren</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				//navigationMode: 'linear',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				dependencies:
+				[
+					{ src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
