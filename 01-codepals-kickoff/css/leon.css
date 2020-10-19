@@ -1,0 +1,41 @@
+/* https://markheath.net/post/css-comma-separated-list */
+.comma-list {
+    display: inline;
+    list-style: none;
+    padding: 0px;
+}
+.comma-list li {
+    display: inline;
+}
+.comma-list li:not(:last-child)::after {
+    content: ", ";
+}
+
+.left-50{
+    background-color: pink;
+    float: left;
+    display: flex;
+    width: 30vw;
+    height: 100vh;
+    overflow: true;
+    padding: 0;
+    margin: 0;
+}
+
+.right-50{
+    float: right;
+    width: 30vw;
+    height: 100vh;
+}
+
+li.good::marker{
+    content: "😻";
+}
+
+li.bad::marker{
+    content: "🙁";
+}
+
+li.kotz::marker{
+    content: "🤮";
+}
