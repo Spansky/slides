@@ -12,3 +12,5 @@ Public Available Slides / Presentations / Material
 [05-backendfrontend (Slides)](https://spansky.github.io/slides/05-backendfrontend)
 
 [06-poker-kickoff (Slides)](https://spansky.github.io/slides/06-poker-kickoff)
+
+[07-rest-apis (Powerpoint)](https://spansky.github.io/slides/07-rest-apis/rest-apis.pptx)
